@@ -1,0 +1,8 @@
+*.obj filter=lfs diff=lfs merge=lfs -text
+resources/models/watermelon.obj filter=lfs diff=lfs merge=lfs -text
+resources/models/ask21mi.obj filter=lfs diff=lfs merge=lfs -text
+resources/models/cherry.obj filter=lfs diff=lfs merge=lfs -text
+resources/models/debugmap.obj filter=lfs diff=lfs merge=lfs -text
+resources/models/Ghost.obj filter=lfs diff=lfs merge=lfs -text
+resources/models/pacman.obj filter=lfs diff=lfs merge=lfs -text
+resources/models/testmap.obj filter=lfs diff=lfs merge=lfs -text

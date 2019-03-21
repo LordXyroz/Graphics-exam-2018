@@ -1,0 +1,104 @@
+=== GFX EXAM Maarten Dijkstra *11.05.18 -> 14.05.18* ===
+
+
+### Extra Features ###
+- FOG
+Fog is toggle with the 'RETURN' key
+
+- High-res maps
+There is a bool at line 20 in main.cpp that you can use to toggle loading of high-res maps.
+At line 63 in Functions.cpp, you can change the map to what you want to use, as long as the .png file is located in /resources/heightmaps.
+For smaller maps, you can change the name at line 30.
+
+NOTICE:
+Do not add the file ending/type as parameter of these functions. The name is automatically appended with .png within the function.
+
+
+
+## Build and run ##
+
+Build instructions used are assimilated from the lab instructions for this course.
+
+Windows (cmake-gui)
+~~~~~~~~~~~~~~~~~~~
+
+1. Set the source code file to the root directory containing "CMakeLists.txt"
+2. Binaries can be built in the directory of your choice, e.g.~"OpenGL\build\"
+3. Click the configure button and select which generator you would like to use
+4. Click the generate button
+5. If your generator is an IDE such as Visual Studio, then open up the newly created .sln file and build "ALL_BUILD". After this you might want to set "main" as you StartUp Project.
+
+Linux (Ubuntu)
+  # Create build subdirectory in directory and navigate into it
+
+  # Generate UNIX Makefile (point CMake to CMakeLists.txt)
+  cmake ..
+
+  # Execute make command
+  make
+
+  # Run executable
+  ./bin/main
+
+#### Controls ####
+--- General ---
+* 'RETURN' 	- Toggles FOG
+* 'TAB' 	- Toggles Mouse bound to window and invisible
+* 'ESC' 	- Exit
+
+--- Seasons ---
+* '1'		- Set season to spring
+* '2'		- Set season to summer
+* '3'		- Set season to autumn
+* '4'		- Set season to winter
+* '5'		- Toggle seasonchange
+
+--- Day/Night ---
+* '6'		- Set time to morning
+* '7'		- Set time to day
+* '8'		- Set time to evening
+* '9'		- Set time to night
+* '0'		- Toggle seasonchange
+
+--- Cam ---
+Rotate and pitch with mouse
+* 'C' 		- Cycle through Camera modes
+* '-'		- Toggle between freeCam and follow Glider
+
+- Free Cam
+* 'I' 		- Move forwards
+* 'K' 		- Move backwards 
+* 'J' 		- Strafe left
+* 'L' 		- Strafe right
+* 'Y' 		- Increase altitude
+* 'H'		- Decrease altitude
+* 'N' 		- Increase zoom (decrease fov)
+* 'M' 		- Decrease zoom (increase fov)
+
+--- Glider ---
+* 'W' 		- Pitch downwards
+* 'S'		- Pitch upwards
+* 'A'		- Roll clockwise
+* 'D'		- Roll counter clockwise
+* 'Q'		- Yaw towards left
+* 'E'		- Yaw towards right
+* ','		- Decrease glider speed
+* '.'		- Increase glider speed
+
+* 'R'		- Reset glider
+* 'F'		- Set random position
+* '-'		- Toggle between freeCam and follow Glider
+
+
+
+### Camera modes ###
+
+freeCam - free movement of the camera from input (not fully implemented).
+staticCam - camera has static position
+followCam - camera follows target (game object) in a distance equals followDistance
+trackingCam - camera stays stationary but tracks target (game object)
+orbitTargetCam - camera orbits target (game object) in a distance equals followDistance
+orbitPositionCam - camera orbits a static position
+
+### Credit ###
+The framework was made with the collaboration of Maarten Dijkstra, Eirik Hiis Hauge, Haakon Aarstein, Sindre Blomberg, Nataniel Gåsøy, Herman Tandberg Dybing and Christian Bråthen Tverberg.

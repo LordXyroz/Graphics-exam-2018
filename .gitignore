@@ -1,0 +1,7 @@
+builds/
+build/
+src/bin/
+bin/
+CMakeFiles/
+glfw/tests/CMakeFiles/
+**.obj
